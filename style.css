@@ -72,7 +72,7 @@ a {
     left: -30%;
     width: var(--nav-width);
     height: 100vh;
-    background-color: var(--first-color);
+    background-color: #f7f6fb;
     padding: .5rem 1rem 0 0;
     transition: .5s;
     z-index: var(--z-fixed);
@@ -106,13 +106,12 @@ a {
 
 .nav_link {
     position: relative;
-    color: var(--first-color-light);
     margin-bottom: 1.5rem;
     transition: .3s;
 }
 
 .nav_link:hover {
-    color: var(--white-color);
+    color: var(--black-color);
 }
 
 .nav_icon {
@@ -128,7 +127,7 @@ a {
 }
 
 .active {
-    color: var(--white-color);
+    color: var(--black-color);
 }
 
 .active::before {
