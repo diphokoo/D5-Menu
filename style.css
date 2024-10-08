@@ -190,6 +190,44 @@ a.nav_logo {
    .toggleBtn {
     margin-right: 85px;
    }
+
+   .footer {
+    position: relative;
+    bottom: 0;
+    width: 100%;
+    background-color: #f8f9fa;
+    text-align: center;
+    padding: 10px;
+}
+
+.l-navbar {
+    min-height: calc(100vh - 50px); /* Adjust for header height */
+}
+
+/* Secondary sidebars hidden by default */
+.secondary-navbar {
+    display: none;
+    background-color: #f8f9fa;
+    width: 250px;
+    height: 100%;
+    padding-top: 60px;
+    z-index: 1;
+    transition: 0.3s;
+}
+
+.secondary-navbar.open {
+    margin-left: -30px;
+    display: block;
+}
+
+ul.nav.flex-column.ms-3 {
+    width: 20rem;
+    max-width: 20rem;
+}
+
+div#secondary-asset {
+    width: 20rem;
+}
    
    @keyframes toggleOn {
      0% {
