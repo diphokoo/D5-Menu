@@ -188,6 +188,10 @@ a.nav_logo {
     animation: toggleOn .3s linear forwards;
    }
    
+   .toggleBtn {
+    margin-right: 85px;
+   }
+   
    @keyframes toggleOn {
      0% {
        transform: translateX(0);
@@ -204,7 +208,7 @@ a.nav_logo {
        transform: translateX(0);
      }
    }
-   
+
 @media screen and (min-width: 768px) {
     body {
         margin: calc(var(--header-height) + 1rem) 0 0 0;
