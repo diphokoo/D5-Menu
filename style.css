@@ -144,7 +144,7 @@ a {
 }
 
 a.nav_logo {
-    margin-left: -22px;
+    margin-left: -27px;
 }
 
 .form-rounded {
@@ -276,7 +276,7 @@ div#secondary-asset {
     }
 
     .nav_logo img {
-        max-width: 160px;
+        max-width: 185px;
         max-height: 60px;
     }
 
