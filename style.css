@@ -225,6 +225,11 @@ ul.nav.flex-column.ms-3 {
     width: 20rem;
     max-width: 20rem;
 }
+
+    .w-85 {
+        width: 84%;
+        max-width: 84%s;
+    }
    
    @keyframes toggleOn {
      0% {
