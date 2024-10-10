@@ -36,3 +36,22 @@ document.addEventListener("DOMContentLoaded", function(event) {
     
      // Your code to run since DOM is loaded and ready
     });
+
+
+            // Get all navigation links
+            const navLinks = document.querySelectorAll('.nav_link');
+            const selectedName = document.getElementById('selected-name');
+    
+            navLinks.forEach(link => {
+                link.addEventListener('click', function() {
+                    // Remove active class from all links
+                    navLinks.forEach(l => l.classList.remove('active'));
+    
+                    // Add active class to the clicked link
+                    this.classList.add('active');
+    
+                    // Change the selected name based on the clicked link
+                    const navName = this.querySelector('.nav_name').innerText; // Get the text of the nav_name span
+                    selectedName.innerText = navName; // Update the selected name in the header
+                });
+            });

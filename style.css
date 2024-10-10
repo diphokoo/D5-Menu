@@ -208,11 +208,12 @@ a.nav_logo {
 .secondary-navbar {
     display: none;
     background-color: #f8f9fa;
-    width: 250px;
+    width: 20rem;
     height: 100%;
     padding-top: 60px;
     z-index: 1;
     transition: 0.3s;
+    margin-left: -30px;
 }
 
 .secondary-navbar.open {
@@ -223,10 +224,6 @@ a.nav_logo {
 ul.nav.flex-column.ms-3 {
     width: 20rem;
     max-width: 20rem;
-}
-
-div#secondary-asset {
-    width: 20rem;
 }
    
    @keyframes toggleOn {
