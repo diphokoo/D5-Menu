@@ -15,6 +15,73 @@
     box-sizing: border-box;
 }
 
+footer.footer.position-fixed {
+    margin-left: -40px;
+}
+
+body
+
+/* Light mode default styles are already set */
+body {
+    background-color: var(--white-color);
+    color: black;
+}
+
+/* Dark mode styles */
+body.dark-mode {
+    background-color: #18191A;
+    color: #e4e6eb;
+}
+
+body.dark-mode .header {
+    background-color: #18191A;
+    border-bottom: 1px solid #f7f6fb;
+}
+
+body.dark-mode .SideBar {
+    background-color: #333;
+}
+
+body.dark-mode .nav_link {
+    color: #b3b3b3;
+}
+
+body.dark-mode .nav_link.active,
+.dark-mode > .secondary-navbar > .d-flex > #sidebar > ul > li > div > ul > li > h6,
+.dark-mode > .secondary-navbar > .d-flex > #sidebar > ul > li > div > ul > li > a.nav-link[aria-expanded="true"] {
+    color: #e4e6eb !important;
+}
+
+body.dark-mode .secondary-navbar {
+    background-color: #2a2a2a;
+}
+
+body.dark-mode footer {
+    background-color: #18191A;
+    color: #b3b3b3;
+    border-top: 1px solid #f7f6fb;;
+}
+
+/* Toggle button styles in dark mode */
+body.dark-mode .label {
+    background-color: white;
+}
+
+body.dark-mode .circle {
+    background-color: black;
+}
+
+.dark-mode > #nav-bar {
+    background-color: #18191A;
+    border-right: 1px solid #f7f6fb;
+}
+
+.dark-mode > header > .header_toggle,
+.dark-mode > .secondary-navbar > .d-flex > #sidebar > ul > li > a,
+.dark-mode > .secondary-navbar > .d-flex > #sidebar > ul > li > div > ul > li > a {
+    color: #b3b3b3;
+}
+
 .nav_list > a {
     text-decoration: none;
 }

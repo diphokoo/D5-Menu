@@ -19,7 +19,9 @@ document.addEventListener("DOMContentLoaded", function () {
 
     const navLinks = document.querySelectorAll('.nav_link'),
         secondaryNavs = document.querySelectorAll('.secondary-navbar'),
-        selectedName = document.getElementById('selected-name');
+        selectedName = document.getElementById('selected-name'),
+        darkModeToggle = document.getElementById('dark-mode'),
+        body = document.getElementById('body-pd');
 
     // Handle nav link clicks and toggle secondary nav
     navLinks.forEach(link => {
@@ -42,6 +44,15 @@ document.addEventListener("DOMContentLoaded", function () {
     document.addEventListener('click', function (event) {
         if (!event.target.closest('.secondary-navbar') && !event.target.closest('.nav_link')) {
             secondaryNavs.forEach(nav => nav.classList.remove('open'));
+        }
+    });
+
+    // Enable dark mode
+    darkModeToggle.addEventListener('change', function () {
+        if (darkModeToggle.checked) {
+            body.classList.add('dark-mode'); // Enable dark mode
+        } else {
+            body.classList.remove('dark-mode'); // Disable dark mode
         }
     });
 });
