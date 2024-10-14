@@ -1,41 +1,35 @@
 document.addEventListener("DOMContentLoaded", function(event) {
-   
-    const showNavbar = (toggleId, navId, bodyId, headerId) =>{
-    const toggle = document.getElementById(toggleId),
-    nav = document.getElementById(navId),
-    bodypd = document.getElementById(bodyId),
-    headerpd = document.getElementById(headerId)
-    
-    // Validate that all variables exist
-    if(toggle && nav && bodypd && headerpd){
-    toggle.addEventListener('click', ()=>{
-    // show navbar
-    nav.classList.toggle('show')
-    // change icon
-    toggle.classList.toggle('bx-x')
-    // add padding to body
-    bodypd.classList.toggle('body-pd')
-    // add padding to header
-    headerpd.classList.toggle('body-pd')
-    })
+    const navLinks = document.querySelectorAll('.nav_link');
+    const secondaryNavs = document.querySelectorAll('.secondary-navbar');
+    const body = document.getElementById('body-pd');
+
+    // Function to toggle the visibility of secondary nav
+    function toggleSecondaryNav(navId) {
+        secondaryNavs.forEach(nav => {
+            if (nav.id === navId) {
+                nav.classList.toggle('open');
+            } else {
+                nav.classList.remove('open');
+            }
+        });
     }
-    }
-    
-    showNavbar('header-toggle','nav-bar','body-pd','header')
-    
-    /*===== LINK ACTIVE =====*/
-    const linkColor = document.querySelectorAll('.nav_link')
-    
-    function colorLink(){
-    if(linkColor){
-    linkColor.forEach(l=> l.classList.remove('active'))
-    this.classList.add('active')
-    }
-    }
-    linkColor.forEach(l=> l.addEventListener('click', colorLink))
-    
-     // Your code to run since DOM is loaded and ready
+
+    // Handle nav link clicks
+    navLinks.forEach(link => {
+        link.addEventListener('click', function(event) {
+            event.stopPropagation(); // Prevents click event from propagating to the body
+            const targetNav = link.getAttribute('data-target');
+            toggleSecondaryNav(targetNav);
+        });
     });
+
+    // Close secondary nav when clicking outside
+    document.addEventListener('click', function(event) {
+        if (!event.target.closest('.secondary-navbar') && !event.target.closest('.nav_link')) {
+            secondaryNavs.forEach(nav => nav.classList.remove('open'));
+        }
+    });
+});
 
 
             // Get all navigation links
@@ -55,3 +49,6 @@ document.addEventListener("DOMContentLoaded", function(event) {
                     selectedName.innerText = navName; // Update the selected name in the header
                 });
             });
+
+
+            
