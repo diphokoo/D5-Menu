@@ -81,9 +81,8 @@
                         <span class="nav_name">Workflow/E-Reqs</span>
                     </a>
                 </div>
-                <a href="#" class="position-absolute bottom-0 ms-2 mb-3 fw-bold">
-                    UAT
-                </a>
+                <a href="#" class="position-absolute bottom-0 ms-2 mb-3 fw-bold" id="uat-link">UAT</a>
+
             </div>
         </nav>
     </div>
@@ -1452,24 +1451,38 @@
 
 
     <script>
-    $(document).ready(function(){
-        // Hide all secondary navbars initially
-        $(".secondary-navbar").hide();
-
-        // Function to handle showing only one secondary navbar at a time
-        $(".nav_link").click(function(e) {
-            e.preventDefault();
-
-            // Get the target ID of the secondary navbar to toggle
-            var target = $(this).data("target");
-
-            // Hide all secondary navbars except the one clicked
-            $(".secondary-navbar").not("#" + target).hide();
-
-            // Toggle the clicked secondary navbar
-            $("#" + target).toggle();
+        $(document).ready(function(){
+            // Hide all secondary navbars initially
+            $(".secondary-navbar").hide();
+        
+            // Function to handle showing only one secondary navbar at a time
+            $(".nav_link").click(function(e) {
+                e.preventDefault();
+        
+                // Get the target ID of the secondary navbar to toggle
+                var target = $(this).data("target");
+        
+                // Hide all secondary navbars except the one clicked
+                $(".secondary-navbar").not("#" + target).hide();
+        
+                // Toggle the clicked secondary navbar
+                $("#" + target).toggle();
+            });
+        
+            // Add click event to UAT link to toggle footer color
+            $("#uat-link").click(function(e) {
+                e.preventDefault();
+                const footer = $(".footer");
+        
+                // Check the current background color and toggle it
+                if (footer.css("background-color") === "rgb(248, 249, 250)") { // White
+                    footer.css("background-color", "rgb(255, 255, 204)"); // Change to blue
+                } else {
+                    footer.css("background-color", "rgb(248, 249, 250)"); // Change back to white
+                }
+            });
         });
-    });
-        </script>
+        </script>        
+        
 </body>
 </html>
