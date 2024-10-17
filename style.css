@@ -327,7 +327,32 @@ div#main-content {
     background-color: #738aaa;
 }
 
+.Consignment {
+    margin-left: -15px;
+    margin-top: 4rem;
+    width: 100%;
+}
 
+.consignmentBtn {
+    background-color: #f8f8f8;
+}
+
+
+
+.btn-light {
+    color: #212529 !important;
+    background-color: #d5d8db !important;
+}
+
+.btn-primary {
+    color: #fff !important;
+    background-color: #738aaa !important;
+}
+
+.btn-dark {
+    color: #fff !important;
+    background-color: #787d78 !important;
+}
     .w-85 {
         width: 84%;
         max-width: 84%s;

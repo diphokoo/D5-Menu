@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Delta 5 Menu Changes</title>
+    <title>Consignment Consumption</title>
     <link href="/style.css" rel="stylesheet">
     <!-- Bootstrap 5 CSS -->
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet">
@@ -1110,7 +1110,7 @@
                                             </li>
                                             <li class="nav-item">
                                                 <h6 class="fw-bold">Issue Reports</h6>
-                                                <a class="nav-link" href="/consignment.html">Consignment Consumption</a>
+                                                <a class="nav-link" href="#">Consignment Consumption</a>
                                                 <a class="nav-link" href="#">Stores Issue And Requisitions</a>
                                             </li>
                                             <li class="nav-item">
@@ -1430,7 +1430,25 @@
         </div>
     </div>
 
-    <div id="main-content" class="float-start">
+    <div class="float-start Consignment">
+        <div class="mainCotainer border w-100 rounded">
+            <div class="consignmentBtn w-100 p-3 border-bottom">
+                <div class="d-inline">
+                    <a data-bs-toggle="collapse" class="btn btn-light search" href="#searchCollapse" role="button" aria-expanded="false" aria-controls="searchCollapse">
+                    Search Criteria
+                    </a>
+                    <button class="btn btn-primary" type="button" id="loaddata">Load</button>
+                    <button class="btn btn-dark" type="button" id="dumpExcel">Excel</button><button class="btn btn-dark ms-1" type="button" id="dumpPDF">PDF</button>            <button class="btn" data-bs-toggle="tooltip" id="resetter" aria-label="Reset" data-bs-original-title="Reset"><i class="fa fa-refresh fs-4" aria-hidden="true"></i></button>
+                    <div id="custombuttons" class="d-inline"></div>
+                    <div class="d-inline float-end">
+                       <span id="rowDisplay"></span>
+                    </div>
+                </div>            
+            </div>
+            <div class="w-100">
+                <h4>Test Bottom</h4>
+            </div>
+        </div>
     </div>
 
     <!-- Footer -->
